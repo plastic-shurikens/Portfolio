@@ -1,0 +1,32 @@
+$whiteColor: #fff;
+$mainColor: #ffd55a;
+$mainBackColor: #071868d8;
+$mainDarkerColor: #f0be29;
+$sliderColor: #2c3b7f;
+
+@mixin section-title() {
+    margin-top: 10px;
+    color: $mainBackColor;
+    text-align: center;
+    font-size: 42px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+@mixin button($color, $backColor, $fontSize) {
+    font-size: $fontSize;
+    padding: 9px;
+    margin: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $color;
+    background-color: $backColor;
+    cursor: pointer;
+}
+
+@mixin flex($direction, $justify){
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $justify;
+}

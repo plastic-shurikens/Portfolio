@@ -1,0 +1,19 @@
+@import '../../global';
+
+.li-item {
+    margin-top: 50px;
+    margin-right: 60px;
+    font-size: 18px;
+    padding: 9px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: $mainBackColor;
+    background-color: $mainColor;
+    transition: 0.3s all ease;
+
+    &.active {
+        color: $mainColor;
+        background-color: $mainBackColor;
+    }
+}
+

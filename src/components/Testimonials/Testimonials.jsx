@@ -2,8 +2,8 @@ import './testimonials.scss'
 
 const Testimonials = () => {
     return (
-        <div>
-            
+        <div className='testimonials' id='testimonials'>
+            {/* <h1>Testimonials</h1> */}
         </div>
     )
 }

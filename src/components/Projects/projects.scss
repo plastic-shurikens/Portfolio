@@ -1,0 +1,68 @@
+@import '../../global';
+
+.projects {
+    background-color: $mainColor;
+     @include flex(column, flex-start);
+
+    .container {
+        
+        .title-container {
+           @include section-title();
+        }
+
+        .ul-container {
+            @include flex(row, center);
+        }
+
+    }
+
+    .image-container {
+        margin-top: 30px;
+        @include flex(row, center);
+        flex-wrap: wrap;
+        position: relative;
+
+        .overlay {
+            @include flex(row, center);
+            margin: 20px;
+            border-radius: 20px;
+            border: 1px solid $mainColor;
+            transition: all 0.4s ease-out;
+
+            .image {
+                width: 350px;
+                height: 300px;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            .items {
+                position: absolute;
+                @include flex(column, space-between);
+                
+            h2 {
+                margin-bottom: 20px;
+                font-size: 24px;
+                color: $mainColor;
+            }
+
+            .nested-items {
+                @include flex(row, space-between);
+
+                .link {
+                   @include button($mainColor, $mainBackColor, 16);
+               }
+            }         
+          }
+            
+            &:hover {
+                background-color: $mainBackColor;
+                .image{
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+        }
+
+    }
+}

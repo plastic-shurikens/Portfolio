@@ -1,0 +1,83 @@
+@import '../../global.scss';
+
+.intro {
+    display: flex;
+
+    .left {
+        flex: 0.5;
+        background-color: $mainColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .left-title {
+            font-size: 30px;
+        }
+
+        .left-f-title {
+            margin: 50px;
+            font-size: 70px;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+
+        .left-span {
+            color: $mainBackColor;
+            font-size: 30px;
+        }
+
+        .ityped-cursor {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+       
+    }
+
+    .right {
+        flex: 0.5;
+        background-color: $mainBackColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .right-image {
+            margin-top: 150px;
+            width: 90%;
+        }
+        .right-link {
+           display: flex;
+           flex-direction: column;
+           align-items: flex-end;
+           justify-content: flex-end;
+           min-width: 600px;
+           min-height: 100px;
+
+            .icon {
+                font-size: 60px;
+                color: $mainColor;
+                 
+                cursor: pointer;
+                animation: arrowBlink 2s infinite;
+            }
+            @keyframes arrowBlink {
+                100% {
+                    opacity: 0;
+                }
+            }
+
+        }
+        
+    }
+
+   
+}
