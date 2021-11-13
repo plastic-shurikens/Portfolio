@@ -12,8 +12,25 @@
 
         .ul-container {
             @include flex(row, center);
-        }
 
+            .li-item {
+                margin-top: 50px;
+                margin-right: 60px;
+                font-size: 18px;
+                padding: 9px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: $mainBackColor;
+                background-color: $mainColor;
+                transition: 0.3s ease;
+            
+                &.active {
+                    color: $mainColor;
+                    transition-duration: 0.5s;
+                    background-color: $mainBackColor;
+                }
+            }
+        }
     }
 
     .image-container {
@@ -22,12 +39,19 @@
         flex-wrap: wrap;
         position: relative;
 
+
         .overlay {
             @include flex(row, center);
             margin: 20px;
             border-radius: 20px;
             border: 1px solid $mainColor;
-            transition: all 0.4s ease-out;
+            opacity: 1;
+            transition: 1.5s ease;
+
+            &.active {
+                transition-duration: 1.5s;
+                opacity: 1;
+            }
 
             .image {
                 width: 350px;
@@ -57,11 +81,13 @@
             
             &:hover {
                 background-color: $mainBackColor;
+                transition-duration: 0.3s;
                 .image{
                     opacity: 0.2;
                     z-index: 0;
                 }
             }
+
         }
 
     }

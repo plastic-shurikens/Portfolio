@@ -1,0 +1,45 @@
+@import '../../global';
+
+.about {
+    background-color: $mainColor;
+    background: url('../../wave4.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    .container {
+          @include flex(column, center);
+            .image {
+                width: 300px;
+                height: 300px;
+                object-fit: cover;
+                border-radius: 200px;
+                margin-bottom: 40px;
+            }
+            h1 {
+                color: $mainColor;
+                letter-spacing: 3px;
+                margin-bottom: 80px; 
+            }
+            h2 {
+                margin-bottom: 100px;
+                color: $mainColor;
+                letter-spacing: 3px;
+            }
+            p {
+                text-align: center;
+                font-size: 20px;
+                padding: 10px;
+                width: 500px;
+                color: $mainBackColor;
+            }
+            .stack {
+                width: 500px;
+                @include stack();
+            }
+    }
+     
+}

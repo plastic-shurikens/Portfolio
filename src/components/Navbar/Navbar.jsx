@@ -6,7 +6,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
         <div className={"navbar " + (menuOpen && "active")}>
             <div className='wrapper'>
             <div className="title">
-                <h1 className="nav-title">Ismail.</h1>
+                <h1 className="nav-title"><a href='#intro'>Ismail.</a></h1>
             </div>
                 <div className="right">
                 <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>

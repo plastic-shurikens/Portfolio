@@ -73,6 +73,12 @@
       &.active {
         background-color: $mainDarkerColor;
         color: $mainBackColor;
+
+        .nav-title {
+          a {
+            color: $mainBackColor;
+          }
+        }
     
         .hamburger {
             
@@ -101,6 +107,11 @@
         .nav-title {
             margin: 5px;
             margin-left: 40px;
+            a {
+              text-decoration: none;
+              color: inherit;
+              // color: $mainColor;
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
 import {useState, useEffect} from 'react';
-import ProjectsList from '../ProjectsList/ProjectsList';
 import {
     featured,
     webApps,
@@ -8,33 +7,28 @@ import {
 } from '../../data'
 import './projects.scss';
 
-const Projects = () => {
-    const [selected, setSelected] = useState('featured');
+const Projects = ({menuOpen, setMenuOpen}) => {
+    const [selected, setSelected] = useState('Featured');
     const [data, setData] = useState([]);
 
     const list = [
         {
-            id: 'featured',
+            id: 'Featured',
             name: 'Featured',
         },
         {
-            id: 'web',
+            id: 'Web',
             name: 'Web Apps',
         },
         {
-            id: 'mobile',
-            name: 'Mobile Apps',
-        },
-        {
-            id: 'designs',
+            id: 'Designs',
             name: 'Designs',
         },
     ]
 
     const fetchData = () => {
-      selected === 'web' ? setData(webApps) 
-      : selected === 'mobile' ? setData(mobileApps) 
-      : selected ===  'designs' ? setData(designs)
+      selected === 'Web' ? setData(webApps)  
+      : selected ===  'Designs' ? setData(designs)
       : setData(featured)
     }
 
@@ -43,36 +37,39 @@ const Projects = () => {
     })
 
     return (
-        <div className='projects' id='projects'>
+        <div className='projects' id='projects' onClick={()=>setMenuOpen(false)}>
             <div className="container">
-                <h1 className='title-container'>Projects</h1>
+                <h1 className='title-container'>{selected}</h1>
                 <ul className='ul-container'>
                     {list.map(item => (
-                        <ProjectsList
-                           key={item.id}
-                           id={item.id}
-                           name={item.name}
-                           active={selected === item.id}
-                           setSelected={setSelected} 
-                        />
+                        <li 
+                          key={item.id}
+                          className={selected === item.id ? 'li-item active' : 'li-item'} 
+                          onClick={
+                            () => setSelected(item.id)
+                          }
+                        >
+                         {item.name}
+                        </li>
                     ))}
                 </ul>
             </div>
-            <div className="image-container">
+            <div className='image-container'>    
                 {data.map(item => (
-                    <div className="overlay" key={item.id}>
+                    <div className={!data ? 'overlay active' : 'overlay' } key={item.id}>
                         <img className='image' src={item.image} alt={item.name} />
                         <div className="items">
                             <h2>{item.name}</h2>
                             <div className="nested-items">
-                            <a className='link' href='#slider'>View Details</a>
-                            <a className='link' href='https://github.com/Plvtinum-1?tab=repositories'>Visit Site</a>
+                                <a className='link' href='#slider'>View Details</a>
+                                <a className='link' href='https://github.com/Plvtinum-1?tab=repositories'>Visit Site</a>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
+       
     )
 }
 

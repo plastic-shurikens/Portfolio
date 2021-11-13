@@ -4,7 +4,7 @@ import ArrowLeft from '@mui/icons-material/ArrowBackIosNew';
 import ArrowRight from '@mui/icons-material/ArrowForwardIos';
 import './slider.scss';
 
-const Slider = () => {
+const Slider = ({menuOpen, setMenuOpen}) => {
     const [select, setSelect] = useState('Web Apps');
     const [current, setCurrent] = useState(0);
     const [nestCurrent, setNestCurrent] = useState(0);
@@ -28,18 +28,13 @@ const Slider = () => {
         name: 'Web Apps',
       },
       {
-        id: 'mobile',
-        name: 'Mobile Apps'
-      },
-      {
         id: 'designs',
         name: 'Designs'
       },
     ]
 
     const fetchData = () => {
-      select === 'Mobile Apps' ? setData(mobileApps) 
-     : select === 'Designs' ? setData(designs) 
+     select === 'Designs' ? setData(designs) 
      : setData(webApps)
     }
 
@@ -48,7 +43,7 @@ const Slider = () => {
     })
 
     return (
-        <div className='slider' id='slider'>
+        <div className='slider' id='slider' onClick={()=>setMenuOpen(false)}>
             <div className="title">
                 <h1>{select}</h1>
                 <ul className="buttons">
@@ -83,7 +78,7 @@ const Slider = () => {
                             {item.images.map((img, index) => (
                                 <div className={index === nestCurrent ? 'slide active' : 'slide'} key={index}> 
                                 {index === nestCurrent && (
-                                  <img className='image-carousel' src={img} alt="" /> 
+                                 <video autoPlay loop className='image-carousel' src="https://res.cloudinary.com/plvtinum/video/upload/v1630245381/YelpCamp/yelpcamp_srn5xj.mp4" width="600" height="700"></video>
                                 )}
                                 </div>
                             ))}

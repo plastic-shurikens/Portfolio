@@ -30,3 +30,13 @@ $sliderColor: #2c3b7f;
     align-items: center;
     justify-content: $justify;
 }
+
+ @mixin stack {
+    @include flex(row, center);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .icon {
+        width: 100%;
+        object-fit: fill;
+    }
+}

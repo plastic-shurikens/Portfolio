@@ -80,14 +80,7 @@
                 }
     
                 .stack {
-                    @include flex(row, center);
-                    margin-top: 30px;
-                    margin-bottom: 30px;
-                    .icon {
-                        width: 100%;
-                       
-                        object-fit: fill;
-                    }
+                    @include stack();
                 }
                 
                 .buttons {

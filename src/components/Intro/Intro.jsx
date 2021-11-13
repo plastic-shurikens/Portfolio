@@ -3,7 +3,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useRef, useEffect } from 'react';
 import { init } from 'ityped'
 
-const Intro = () => {
+const Intro = ({setMenuOpen, menuOpen}) => {
     const textRef = useRef();
 
     useEffect(() => {
@@ -11,7 +11,7 @@ const Intro = () => {
 
     }, [])
     return (
-        <div className='intro' id='intro'>
+        <div className='intro' id='intro' onClick={()=>setMenuOpen(false)}>
             <div className="left">
                <h3 className='left-title'>Hi I'm</h3>
                <h1 className='left-f-title'>Ismail Dahri</h1>
