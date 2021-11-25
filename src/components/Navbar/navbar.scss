@@ -12,14 +12,12 @@
 
     .wrapper {
         padding: 10px 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    
-        .left {
-          display: flex;
-          align-items: center;
-    
+        @include flex (row, center, space-between);
+
+        @include mobile (500px) {
+          padding: 10px 0;
+        }
+  
           .logo {
             font-size: 40px;
             font-weight: 700;
@@ -29,13 +27,8 @@
           }
     
           .itemContainer {
-            display: flex;
-            align-items: center;
+            @include flex (row, center, center);
             margin-left: 30px;
-    
-            // @include mobile{
-            //   display: none;
-            // }
     
             .icon {
               font-size: 18px;
@@ -47,16 +40,14 @@
               font-weight: 500;
             }
           }
-        }
+        
 
-    .right {
+    .nav-right {
         .hamburger {
           margin-right: 40px;
           width: 32px;
           height: 25px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          @include flex (column, center, space-between);
           cursor: pointer;
   
           span {
@@ -97,24 +88,20 @@
           }
         }
       }
-    
 
       .title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
+        @include flex (row, center, center);
         .nav-title {
             margin: 5px;
             margin-left: 40px;
             a {
               text-decoration: none;
               color: inherit;
-              // color: $mainColor;
             }
         }
     }
 }
+
 
 
     

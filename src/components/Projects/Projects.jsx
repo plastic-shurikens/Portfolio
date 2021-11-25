@@ -1,10 +1,5 @@
-import {useState, useEffect} from 'react';
-import {
-    featured,
-    webApps,
-    mobileApps,
-    designs
-} from '../../data'
+import { useState, useEffect } from 'react';
+import { featured, webApps, frontEnd } from '../../sliderData'
 import './projects.scss';
 
 const Projects = ({menuOpen, setMenuOpen}) => {
@@ -17,18 +12,18 @@ const Projects = ({menuOpen, setMenuOpen}) => {
             name: 'Featured',
         },
         {
-            id: 'Web',
+            id: 'Web Apps',
             name: 'Web Apps',
         },
         {
-            id: 'Designs',
-            name: 'Designs',
+            id: 'Front End',
+            name: 'Front-end',
         },
     ]
 
     const fetchData = () => {
-      selected === 'Web' ? setData(webApps)  
-      : selected ===  'Designs' ? setData(designs)
+      selected === 'Web Apps' ? setData(webApps)  
+      : selected ===  'Front End' ? setData(frontEnd)
       : setData(featured)
     }
 

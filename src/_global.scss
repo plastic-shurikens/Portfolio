@@ -24,19 +24,27 @@ $sliderColor: #2c3b7f;
     cursor: pointer;
 }
 
-@mixin flex($direction, $justify){
+@mixin flex($direction, $align, $justify){
     display: flex;
     flex-direction: $direction;
-    align-items: center;
+    align-items: $align;
     justify-content: $justify;
 }
 
- @mixin stack {
-    @include flex(row, center);
+ @mixin stack($width) {
+    @include flex(row, center, center);
     margin-top: 30px;
     margin-bottom: 30px;
+    width: $width;
     .icon {
-        width: 100%;
+        width: 60%;
         object-fit: fill;
+    }
+}
+
+// $width: 768px;
+@mixin mobile($width) {
+    @media (max-width: $width){
+        @content
     }
 }

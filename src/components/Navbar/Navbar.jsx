@@ -8,7 +8,7 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
             <div className="title">
                 <h1 className="nav-title"><a href='#intro'>Ismail.</a></h1>
             </div>
-                <div className="right">
+                <div className="nav-right">
                 <div className="hamburger" onClick={()=>setMenuOpen(!menuOpen)}>
                     <span className="line1"></span>
                     <span className="line2"></span>

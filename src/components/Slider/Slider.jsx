@@ -1,25 +1,19 @@
 import { useState, useEffect} from 'react';
-import { webApps, mobileApps, designs } from '../../sliderData';
+import { webApps, frontEnd } from '../../sliderData';
 import ArrowLeft from '@mui/icons-material/ArrowBackIosNew';
 import ArrowRight from '@mui/icons-material/ArrowForwardIos';
 import './slider.scss';
 
-const Slider = ({menuOpen, setMenuOpen}) => {
+const Slider = ({ setMenuOpen }) => {
     const [select, setSelect] = useState('Web Apps');
     const [current, setCurrent] = useState(0);
-    const [nestCurrent, setNestCurrent] = useState(0);
     const [data, setData] = useState([]);
-
-    console.log(nestCurrent)
-
     const nextSlide = () => {
         setCurrent(current === data.length - 1 ? 0 : current + 1);
-        setNestCurrent(0);
     }
 
     const prevSlide = () => {
         setCurrent(current === 0 ? data.length - 1 : current - 1);
-        setNestCurrent(0);
     }
 
     const list = [
@@ -28,13 +22,13 @@ const Slider = ({menuOpen, setMenuOpen}) => {
         name: 'Web Apps',
       },
       {
-        id: 'designs',
-        name: 'Designs'
+        id: 'front',
+        name: 'Front-end'
       },
     ]
 
     const fetchData = () => {
-     select === 'Designs' ? setData(designs) 
+     select === 'Front-end' ? setData(frontEnd) 
      : setData(webApps)
     }
 
@@ -44,7 +38,7 @@ const Slider = ({menuOpen, setMenuOpen}) => {
 
     return (
         <div className='slider' id='slider' onClick={()=>setMenuOpen(false)}>
-            <div className="title">
+            <div className="header">
                 <h1>{select}</h1>
                 <ul className="buttons">
                     {list.map(item => (
@@ -52,41 +46,38 @@ const Slider = ({menuOpen, setMenuOpen}) => {
                     ))}
                 </ul>
             </div>
-            <ArrowLeft className='left' onClick={prevSlide} />
-            <ArrowRight className='right' onClick={nextSlide} />
-            <div className="container">
+            
+            <div className="body">
+               <ArrowLeft className='icon' onClick={prevSlide} />
                 {data.map((item, index) => (
-                   <div className={index === current ? 'sliding active' : 'sliding'} key={index}> 
+                   <div className={index === current ? 'contain sliding active' : 'contain sliding'} key={index}> 
                     {index === current && (
                      <>
                         <div className="content">
                             <h1>{item.name}</h1>
-                            <p>{item.description}</p>
+                            <ul>
+                                {item.description.map(text => (
+                                    <li>{text}</li>
+                                ))}
+                            </ul>
                             <div className="stack">
                                 {item.stack.map(pic => 
                                         <img className='icon' src={pic} alt="" />
                                 )} 
                             </div>
                             <ul className="buttons">
-                                <li><a href='https://www.google.com'>View Github</a></li>
-                                <li><a href='https://www.google.com'>View Site</a></li>
+                                <li><a href={item.githubUrl}>View Github</a></li>
+                                <li><a href={item.siteUrl}>View Site</a></li>
                             </ul>
                         </div>
-                        <div className="carousel">
-                            <ArrowLeft className='left' onClick={() => setNestCurrent(nestCurrent === item.images.length - 1 ? 0 : nestCurrent + 1)} />
-                            <ArrowRight className='right' onClick={() => setNestCurrent(nestCurrent === 0 ? item.images.length - 1 : nestCurrent - 1)}  /> 
-                            {item.images.map((img, index) => (
-                                <div className={index === nestCurrent ? 'slide active' : 'slide'} key={index}> 
-                                {index === nestCurrent && (
-                                 <video autoPlay loop className='image-carousel' src="https://res.cloudinary.com/plvtinum/video/upload/v1630245381/YelpCamp/yelpcamp_srn5xj.mp4" width="600" height="700"></video>
-                                )}
-                                </div>
-                            ))}
+                        <div className="video-cont">
+                          <video autoPlay loop className='video' src={item.video}></video>
                         </div> 
                       </>
                     )}   
                    </div> 
                 ))}
+               <ArrowRight className='icon' onClick={nextSlide} />
             </div>
         </div>
     )

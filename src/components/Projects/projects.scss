@@ -2,19 +2,35 @@
 
 .projects {
     background-color: $mainColor;
-     @include flex(column, flex-start);
+     @include flex(column, center, flex-start);
 
     .container {
-        
+        @include flex(column, center, space-evenly);
+        flex: 0.2;
+        @include mobile(500px){
+            height: 380px;
+        }
         .title-container {
            @include section-title();
+
+           @include mobile(500px) {
+              margin-top: 0;
+              margin-bottom: 10px;
+              font-size: 40px;
+           }
         }
 
         .ul-container {
-            @include flex(row, center);
+            @include flex(row, center, center);
+
+            @include mobile(500px) {
+                @include flex(row, center, center);
+                padding: 0;
+                margin-bottom: 20px;
+            }
 
             .li-item {
-                margin-top: 50px;
+                margin-top: 30px;
                 margin-right: 60px;
                 font-size: 18px;
                 padding: 9px;
@@ -23,6 +39,13 @@
                 color: $mainBackColor;
                 background-color: $mainColor;
                 transition: 0.3s ease;
+
+                @include mobile(500px) {
+                    margin-top: 10px;
+                    margin-right: 15px;
+                    font-size: 13px;
+                    padding: 6px;
+                }
             
                 &.active {
                     color: $mainColor;
@@ -34,14 +57,17 @@
     }
 
     .image-container {
-        margin-top: 30px;
-        @include flex(row, center);
+        @include flex(row, center, center);
+        flex: 0.8;
         flex-wrap: wrap;
         position: relative;
 
+        @include mobile(500px){
+            margin-top: 10px;
+        } 
 
         .overlay {
-            @include flex(row, center);
+            @include flex(row, center, center);
             margin: 20px;
             border-radius: 20px;
             border: 1px solid $mainColor;
@@ -54,15 +80,22 @@
             }
 
             .image {
+                position: c;
                 width: 350px;
                 height: 300px;
                 object-fit: cover;
+                object-position: left center;
+                left: 0;
                 z-index: 1;
+
+                @include mobile(500px) {
+                    width: 300px;
+                }
             }
 
             .items {
                 position: absolute;
-                @include flex(column, space-between);
+                @include flex(column, space-between, center);
                 
             h2 {
                 margin-bottom: 20px;
@@ -71,7 +104,7 @@
             }
 
             .nested-items {
-                @include flex(row, space-between);
+                @include flex(row, space-between, center);
 
                 .link {
                    @include button($mainColor, $mainBackColor, 16);

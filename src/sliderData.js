@@ -1,177 +1,73 @@
+export const featured = [
+    {
+      id: 1,
+      name: 'Yelp Camp',
+      image: 'https://res.cloudinary.com/plvtinum/image/upload/v1637589223/Portfolio/yelpc_twnbtx.png'
+    },
+    {
+        id: 2,
+        name: 'Ecommerce',
+        image: 'https://res.cloudinary.com/plvtinum/image/upload/v1637590010/Portfolio/ecom_myecvw.png'
+    },
+]
+
 export const webApps = [
     {
-        id: 1,
-        name: 'Project1',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+        id: 6,
+        name: 'Yelp Camp',
+        description: ['Used EJS template engine to render the UI and Bootstrap to style it.',
+                     'Implemented MongoDB relationships for reviews.',
+                     'Implemented user authentication with the help of passport.js and user validation using JOI.',
+                     'Added a map cluster to the site with Mapbox API.', 
+                     'Fixed some security issues using helmet.js. Deployed to heroku using git'],
+
+        image:'https://res.cloudinary.com/plvtinum/image/upload/v1637589223/Portfolio/yelpc_twnbtx.png',
+        video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663725/Portfolio/yelp_q63k8b.mp4',
+        stack: [
+            'assets/Nodejs2.png',
+            'assets/MongoDB.png',
+        ],
+        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
+        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
+    },
+    {
+        id: 7,
+        name: 'Ecommerce',
+        description: [
+            'Used ReactJs framework for the front-end and CommerceJs Api for the backend',
+            'Used Sass for styling',
+            'I created a checkout multiple steps form and integrated paypal payment',
+            'Used Emailjs Api for handling emails',
+        ],
+        image: 'https://res.cloudinary.com/plvtinum/image/upload/v1637590010/Portfolio/ecom_myecvw.png',
+        video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663573/Portfolio/ecom_mqb8cj.mp4',
         stack: [
             'assets/React.png',
             'assets/Sass.png',
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1581568684440-7f6cbc20e46f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1532295039064-229629db1073?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1584645511189-2a471d586ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1524168272322-bf73616d9cb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
+        githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop',
+        siteUrl: 'https://commercejs-react-app.herokuapp.com',
     },
-    {
-        id: 2,
-        name: 'Project2',
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Why do we use it? It is a long established fact that a reader.",
-        stack: [
-            'assets/React.png',
-            'assets/Sass.png',
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1543964198-d54e4f0e44e3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1581568684440-7f6cbc20e46f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1584645511189-2a471d586ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    },
-    {
-        id: 3,
-        name: 'Project3',
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethic",
-        stack: [
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
-            'assets/React.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1552742462-7ae9d9cef2e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1620938289349-86988c5a81a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    }
 ]
 
-export const mobileApps = [
-    
+export const frontEnd = [
     {
-        id: 2,
-        name: 'Project1',
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Why do we use it? It is a long established ",
-        stack: [
-            'assets/React.png',
-            'assets/Sass.png',
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1620938289349-86988c5a81a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1584645511189-2a471d586ac2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1620938289349-86988c5a81a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    },
-    {
-        id: 1,
+        id: 9,
         name: 'Project2',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+        description: [
+            'fsdfsdf',
+            'ydfsdfsdf',
+            'sdfsdfsdfsd',
+            'dfsdfsdfsdf',
+        ],
+        image: 'yy',
+        video: 'yyyy',
         stack: [
             'assets/React.png',
             'assets/Sass.png',
             'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1581568684440-7f6cbc20e46f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1524168272322-bf73616d9cb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
+        githubUrl: '',
+        siteUrl: '',
     },
-    {
-        id: 3,
-        name: 'Project3',
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics",
-        stack: [
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
-            'assets/React.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    }
-]
-
-export const designs = [
-    {
-        id: 3,
-        name: 'Project1',
-        description: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics",
-        stack: [
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
-            'assets/React.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    },
-    {
-        id: 1,
-        name: 'Project2',
-        description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using "Content here, content here", making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for "lorem ipsum" will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
-        stack: [
-            'assets/React.png',
-            'assets/Sass.png',
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-            'assets/Mui.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    },
-    {
-        id: 2,
-        name: 'Project3',
-        description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Why do we use it? It is a long established fact that a reader.",
-        stack: [
-            'assets/React.png',
-            'assets/Sass.png',
-            'assets/Nodejs2.png',
-            'assets/MongoDB.png',
-        ],
-        githubUrl: 'https://github.com/Plvtinum-1?tab=repositories',
-        siteUrl: 'https://reactjs.org/',
-        images: [
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-            'https://images.unsplash.com/photo-1563845902896-6d4d52e019da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=800&q=80',
-        ]
-    },
-    
 ]

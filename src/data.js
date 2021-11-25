@@ -39,25 +39,7 @@ export const webApps = [
     }
 ]
 
-export const mobileApps = [
-    {
-      id: 1,
-      name: 'Project 1',
-      image: 'https://res.cloudinary.com/plvtinum/image/upload/v1630176994/YelpCamp/sn9lv2bs4d04ktg8gqto.jpg'
-    },
-    {
-        id: 2,
-        name: 'Project 2',
-        image: 'https://res.cloudinary.com/plvtinum/image/upload/v1630176865/YelpCamp/pm8lg2bdvstqnj0yicic.jpg'
-    },
-    {
-        id: 3,
-        name: 'Project 3',
-        image: 'https://res.cloudinary.com/plvtinum/image/upload/v1630177729/YelpCamp/brksfuqkfccrgjn3lv8f.jpg'
-    }
-]
-
-export const designs = [
+export const frontEnd = [
     {
       id: 1,
       name: 'Project 1',

@@ -5,155 +5,227 @@
     background: url('../../contact-wave2.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    @include flex(row, flex-start, center);
 
-    @include flex(row, center);
-    .form {
+    .form-cont {
+        @include flex(column, center, space-between);
+        flex: 0.5;
         position: relative;
         width: 100%;
         height: 100%;
-        @include flex(column, center);
-        flex: 0.5;
+
+        @include mobile(1026px){
+          flex: 0.6;
+       }
+
+        @include mobile(874px){
+          flex: 1;
+          width: 350px;
+        }
+
         .elements {
-            @include flex(column, center);
+            @include flex(column, center, center);
+            flex: 0.8;
             margin-right: 150px;
             width: 600px;
+
+            @include mobile(1150px){
+              margin-right: 100px;
+            }
+
+            @include mobile(964px){
+              margin-left: 70px;
+              margin-right: 0;
+            }
+
+            @include mobile(874px){
+              margin-left: 0;
+            }
+
             h1 {
                 font-size: 40px;
                 letter-spacing: 3px;
                 text-align: center;
                 color: $mainColor;
+                margin-top: 130px;
                 margin-bottom: 40px;
+
+               @include mobile(1150px){
+                 font-size: 30px;
+               } 
+
+               @include mobile(600px){
+                margin-top: 10px;
+              }
             }
-            input, textarea {
-                margin-bottom: 20px;
-                width: 300px;
-                border-radius: 10px;
-            }
-            textarea {
-                height: 150px;
-                padding-top: 10px;
-            }
+           
             .text {
                 height: 80px;
                 border-radius: 10px;
             }
-            button {
-                @include button($mainBackColor, $mainColor, 16px);
-            }
+            
             h2, h3, h4 {
                 color: $mainColor;
             } 
-            .textField {
-                background-color: #fff;
-                border-radius: 10px;
-            }
+
             .box {
                 display: flex;
                 flex-direction: column;
-            }
+            } 
 
-            
+            .form-content {
+
+              .form {
+                width: 350px;
+                @include flex(column, flex-start, center); 
+
+                .form-inputs {
+                  @include flex(column, flex-start, center);
+                  width: 100%;
+
+                  .form-label {
+                    display: inline-block;
+                    font-size: 1rem;
+                    margin-bottom: 6px;
+                    color: #fff;
+                  }
+    
+                  .form-input {
+                    display: block;
+                    padding-left: 10px;
+                    margin-bottom: 20px;
+                    outline: none;
+                    border-radius: 20px;
+                    height: 40px;
+                    width: 80%;
+                    border: none;
+                    &::placeholder {
+                      color: #595959;
+                      font-size: 12px;
+                    }
+                  }
+
+                  .message {
+                    height: 80px;
+                    padding-top: 10px;
+                  }
+    
+                  p {
+                    font-size: 0.8rem;
+                    margin-bottom: 15px;
+                    color: #f00e0e;
+                  }
+                }
+
+                .form-input-btn {
+                  width: 80%;
+                  height: 50px;
+                  margin-top: 10px;
+                  border-radius: 20px;
+                  background: linear-gradient(
+                    90deg,
+                    #ffd55a 0%,
+                    #f8da82 100%
+                  );
+                  outline: none;
+                  border: none;
+                  color: $mainBackColor;
+                  font-size: 1rem;
+                  &:hover {
+                    cursor: pointer;
+                    background: linear-gradient(
+                      90deg,
+                      #ffd55a 0%,
+                      #c79a13 100%
+                    );
+                    transition: all 0.4s ease-out;
+                  }
+                }
+                
+              }
+            }  
         }
         
         .icons {
-            position: absolute;
-            display: flex;
-            flex-direction: row;
-            left: 10px;
-            bottom: 10px;
+            @include flex(row, center, center);
+            flex: 0.2;
+            margin-right: 100px;
+
+            @include mobile(1280px){
+              margin-right: 80px;
+            }
+
+            @include mobile(1184px){
+              margin-right: 60px;
+            }
+
+            @include mobile(1140px){
+               margin-right: 0px;
+            }
+
+            @include mobile(520px){
+              @include flex(column, flex-start, flex-start);
+              margin-right: 110px;
+           }
+           
+            .git-lin {
+              @include flex(row, center, center);
+            }
+
+            .phone {
+              @include flex(row, center, center);
+            }
+
+            .email {
+              @include flex(row, center, center);
+            }
+
             .icon {
                 color: $mainColor;
-                font-size: 40px;
+                font-size: 35px;
                 margin: 5px;
             }
+
             h3 {
                 font-size: 18px;
                 color: $mainColor;
                 text-align: center;
-                margin-top: 12px;
             }
         }
     }
+
     .draw {
         width: 100%;
         height: 100%;
-        @include flex(column, center);
+        @include flex(column, center, center);
         flex: 0.5;
+
+        @include mobile(1026px){
+          flex: 0.4;
+        }
+
+        @include mobile(874px){
+          flex: 0;
+        }
+
         img {
             width: 100%;
+
+            @include mobile(1150px){
+              width: 500px;
+              margin-left: 120px;
+              margin-top: -80px;
+            }
+
+            @include mobile(964px){
+              width: 350px;
+              margin-left: 140px;
+              margin-top: -80px;
+            }
+
+            @include mobile(874px){
+              display: none;
+            }
         }
     }
 }
-  
-
-  .form-inputs p {
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-    color: #f00e0e;
-  }
-  
-  .form-label {
-    display: inline-block;
-    font-size: 1rem;
-    margin-bottom: 6px;
-    color: #fff;
-  }
-  
-  .form-input {
-    display: block;
-    padding-left: 10px;
-    outline: none;
-    border-radius: 2px;
-    height: 40px;
-    width: 100%;
-    border: none;
-  }
-  
-  .form-input::placeholder {
-    color: #595959;
-    font-size: 12px;
-  }
-  
-  .form-input-btn {
-    width: 80%;
-    height: 50px;
-    margin-top: 10px;
-    border-radius: 2px;
-    background: linear-gradient(
-      90deg,
-      #ffd55a 0%,
-      #f8da82 100%
-    );
-    outline: none;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-  }
-  
-  .form-input-btn:hover {
-    cursor: pointer;
-    background: linear-gradient(
-      90deg,
-      #ffd55a 0%,
-      #c79a13 100%
-    );
-    transition: all 0.4s ease-out;
-  }
-  
-  .form-input-login {
-    font-size: 0.8rem;
-    margin-top: 10px;
-    color: #fff;
-    width: 80%;
-    text-align: center;
-  }
-  
-  .form-input-login a {
-    text-decoration: none;
-    color: #27cdff;
-    font-weight: 600;
-  }
