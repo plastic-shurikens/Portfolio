@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 
 const useForm = (callback, validate) => {
+  const userId = process.env.USER_ID;
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -20,7 +21,7 @@ const useForm = (callback, validate) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    emailjs.sendForm('gmail', 'template_tj6kae8', e.target, 'user_vUHMKjZ4XQzO01SGRy0Sb')
+    emailjs.sendForm('gmail', 'template_tj6kae8', e.target, userId)
       .then((result) => {
           console.log(result.text);
       }, (error) => {

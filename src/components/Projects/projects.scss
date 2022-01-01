@@ -2,6 +2,7 @@
 
 .projects {
     background-color: $mainColor;
+    position: relative;
      @include flex(column, center, flex-start);
 
     .container {
@@ -12,7 +13,8 @@
         }
         .title-container {
            @include section-title();
-
+            font-size: 2.2em;
+            font-weight: 600;
            @include mobile(500px) {
               margin-top: 0;
               margin-bottom: 10px;
@@ -56,15 +58,119 @@
         }
     }
 
+    .project-container {
+        position: absolute;
+        border-radius: 20px;
+        top: 30px;
+        margin: 0px 30px;
+        height: 900px;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-out;
+        background-color: $mainBackColor;
+
+        .close-svg {
+            position: absolute;
+            width: 40px;
+            right: 0;
+            z-index: 100;
+            height: 40px;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .inside-p-container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            width: inherit;
+            height: inherit;
+            @include mobile(968px) {
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+            }
+
+            .inside-p-container-content {
+                @include mobile(968px) {
+                    grid-column: 1/4;
+                }
+                grid-column: 1/2;
+                @include flex(column, center, center);
+                p {
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    font-size: 20px;
+                    padding: 5px;
+                    text-align: center;
+                    
+                    @include mobile(968px) {
+                        font-size: 16px;
+                        margin-top: 7px;
+                       margin-bottom: 7px;
+                    }
+                }
+                h1, p {
+                    color: $mainColor;
+                }
+                .stack {
+                  @include stack(230px);
+                  @include mobile(968px) {
+                    @include stack(190px);
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                }
+                  img {
+                      margin: 7px;
+                  }
+                }
+
+                .buttons {
+                    padding: 0;
+                    @include flex(row, center, center);
+                    li {
+                        @include button($mainBackColor, $mainColor, 22);
+                    }
+                    a {
+                        text-decoration: none;
+                        color: $sliderColor;
+                    }
+                    margin-bottom: 20px;
+                    @include mobile(968px) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            .inside-p-container-image {
+                @include mobile(968px) {
+                    grid-column: 1/4;
+                }
+                grid-column: 2/4;
+                position: relative;
+               .container-image {
+                 object-fit: contain;  
+                 object-position: center;
+                 
+                 position: absolute;
+
+               }
+            }
+        }
+    }
+
     .image-container {
-        @include flex(row, center, center);
+        @include flex(row, flex-start, center);
         flex: 0.8;
         flex-wrap: wrap;
         position: relative;
 
         @include mobile(500px){
             margin-top: 10px;
-        } 
+        }
 
         .overlay {
             @include flex(row, center, center);
@@ -80,7 +186,6 @@
             }
 
             .image {
-                position: c;
                 width: 350px;
                 height: 300px;
                 object-fit: cover;
@@ -98,6 +203,7 @@
                 @include flex(column, space-between, center);
                 
             h2 {
+                text-align: center;
                 margin-bottom: 20px;
                 font-size: 24px;
                 color: $mainColor;
@@ -109,7 +215,8 @@
                 .link {
                    @include button($mainColor, $mainBackColor, 16);
                }
-            }         
+            } 
+                   
           }
             
             &:hover {
