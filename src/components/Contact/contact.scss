@@ -2,7 +2,7 @@
 
 .contact {
     background-color: $mainColor;
-    background: url('../../contact-wave2.svg');
+    background: url('../../otherAssets/contact-wave2.svg');
     background-repeat: no-repeat;
     background-size: cover;
     @include flex(row, flex-start, center);

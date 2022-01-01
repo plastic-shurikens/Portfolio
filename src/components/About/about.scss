@@ -2,7 +2,7 @@
 
 .about {
     background-color: $mainColor;
-    background: url('../../wave4.svg');
+    background: url('../../otherAssets/wave4.svg');
     background-repeat: no-repeat;
     background-size: cover;
     @include flex (row, flex-start, center);
