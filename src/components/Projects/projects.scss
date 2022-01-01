@@ -100,9 +100,12 @@
                 }
                 grid-column: 1/2;
                 @include flex(column, center, center);
+                h1 {
+                    margin-bottom: 40px;
+                }
                 p {
-                    margin-top: 40px;
-                    margin-bottom: 20px;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
                     font-size: 20px;
                     padding: 5px;
                     text-align: center;

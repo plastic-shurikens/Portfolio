@@ -2,11 +2,10 @@ export const webApps = [
     {
         id: 0,
         name: 'Dev Blog',
-        description: ['Used EJS template engine to render the UI and Bootstrap to style it.',
-                     'Implemented MongoDB relationships for reviews.',
-                     'Implemented user authentication with the help of passport.js and user validation using JOI.',
-                     'Added a map cluster to the site with Mapbox API.', 
-                     'Fixed some security issues using helmet.js. Deployed to heroku using git'],
+        description: [
+            'This project is a blog made with NextJs for handling front-end, Graphcms Api for server-side and Tailwindcss for styling',
+            'You can create/read/update/delete blogs, add authors, comment and contact blog admins.',
+        ],
         image: 'https://res.cloudinary.com/plvtinum/image/upload/v1640978888/Portfolio/devblog_knqmpk.png',
         video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663725/Portfolio/yelp_q63k8b.mp4',
         stack: [
@@ -19,11 +18,11 @@ export const webApps = [
     {
         id: 1,
         name: 'Yelp Camp',
-        description: ['Used EJS template engine to render the UI and Bootstrap to style it.',
-                     'Implemented MongoDB relationships for reviews.',
-                     'Implemented user authentication with the help of passport.js and user validation using JOI.',
-                     'Added a map cluster to the site with Mapbox API.', 
-                     'Fixed some security issues using helmet.js. Deployed to heroku using git'],
+        description: [
+            'This project is made with NodeJs and MongoDB for back-end and Express(ejs) as a view engine',
+            'This camping website can let people share their campground location, You have to create an account in order to start adding your campgrounds, you will see the location of the campground after creating it, then add a review and comment on it.',
+
+        ],
 
         image:'https://res.cloudinary.com/plvtinum/image/upload/v1637589223/Portfolio/yelpc_twnbtx.png',
         video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663725/Portfolio/yelp_q63k8b.mp4',
@@ -38,10 +37,8 @@ export const webApps = [
         id: 2,
         name: 'Ecommerce',
         description: [
-            'Used ReactJs framework for the front-end and CommerceJs Api for the backend',
-            'Used Sass for styling',
-            'I created a checkout multiple steps form and integrated paypal payment',
-            'Used Emailjs Api for handling emails',
+            'This Project is made with ReactJs for handling front-end, CommerceJS for handling back-end and Sass for styling',
+            'This Ecommerce website displays multiple product categories, the only payment option available is paypal.',
         ],
         image: 'https://res.cloudinary.com/plvtinum/image/upload/v1637590010/Portfolio/ecom_myecvw.png',
         video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663573/Portfolio/ecom_mqb8cj.mp4',
@@ -54,24 +51,3 @@ export const webApps = [
     },
 ]
 
-export const frontEnd = [
-    {
-        id: 9,
-        name: 'Project2',
-        description: [
-            'fsdfsdf',
-            'ydfsdfsdf',
-            'sdfsdfsdfsd',
-            'dfsdfsdfsdf',
-        ],
-        image: 'yy',
-        video: 'yyyy',
-        stack: [
-            'assets/React.png',
-            'assets/Sass.png',
-            'assets/Nodejs2.png',
-        ],
-        githubUrl: '',
-        siteUrl: '',
-    },
-]

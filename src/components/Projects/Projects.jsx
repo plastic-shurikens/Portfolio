@@ -50,7 +50,9 @@ const Projects = ({menuOpen, setMenuOpen}) => {
                       <>
                       <div className='inside-p-container-content'>
                         <h1>{item.name}</h1>
-                        <p>{item.description}</p>
+                        {item.description && item.description.map(item => (
+                            <p>{item}</p>
+                        ))}
                         <div className='stack'>
                             {item.stack && item.stack.map(pic => (
                                 <img className='icon' src={pic} alt="" />
