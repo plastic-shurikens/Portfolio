@@ -26,7 +26,7 @@ const Projects = ({menuOpen, setMenuOpen}) => {
                             <div className="items">
                                 <h2>{item.name}</h2>
                                 <div className={ 'nested-items'}>
-                                    <button 
+                                    <li
                                      onClick={
                                         () => {
                                          setDiv(true);
@@ -36,7 +36,7 @@ const Projects = ({menuOpen, setMenuOpen}) => {
                                      className='link'
                                     >
                                       View Details
-                                    </button>
+                                    </li>
                                     <a className='link' href={item.siteUrl}>Visit Site</a>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import emailjs from 'emailjs-com';
 
 const useForm = (callback, validate) => {
-  const userId = process.env.USER_ID;
+  const userId = process.env.REACT_APP_USER_ID;
   const [values, setValues] = useState({
     name: '',
     email: '',
