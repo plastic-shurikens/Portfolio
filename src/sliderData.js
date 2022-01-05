@@ -28,8 +28,8 @@ export const webApps = [
             'assets/Nodejs2.png',
             'assets/MongoDB.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop',
-        siteUrl: 'https://commercejs-react-app.herokuapp.com/',
+        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
+        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
     },
     {
         id: 2,
@@ -43,8 +43,8 @@ export const webApps = [
             'assets/React.png',
             'assets/Sass.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
-        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
+        githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop', 
+        siteUrl: 'https://commercejs-react-app.herokuapp.com/',
     },
 ]
 
