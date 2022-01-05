@@ -7,13 +7,12 @@ export const webApps = [
             'You can create/read/update/delete blogs, add authors, comment and contact blog admins.',
         ],
         image: 'https://res.cloudinary.com/plvtinum/image/upload/v1640978888/Portfolio/devblog_knqmpk.png',
-        video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663725/Portfolio/yelp_q63k8b.mp4',
         stack: [
             'assets/nextjs.png',
             'assets/tailwindcss.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
-        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
+        githubUrl: 'https://github.com/Plvtinum-1/Blog_Next_App',
+        siteUrl: 'https://nextblog-app.vercel.app/',
     },
     {
         id: 1,
@@ -25,13 +24,12 @@ export const webApps = [
         ],
 
         image:'https://res.cloudinary.com/plvtinum/image/upload/v1637589223/Portfolio/yelpc_twnbtx.png',
-        video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663725/Portfolio/yelp_q63k8b.mp4',
         stack: [
             'assets/Nodejs2.png',
             'assets/MongoDB.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
-        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
+        githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop',
+        siteUrl: 'https://commercejs-react-app.herokuapp.com/',
     },
     {
         id: 2,
@@ -41,13 +39,12 @@ export const webApps = [
             'This Ecommerce website displays multiple product categories, the only payment option available is paypal.',
         ],
         image: 'https://res.cloudinary.com/plvtinum/image/upload/v1637590010/Portfolio/ecom_myecvw.png',
-        video: 'https://res.cloudinary.com/plvtinum/video/upload/v1637663573/Portfolio/ecom_mqb8cj.mp4',
         stack: [
             'assets/React.png',
             'assets/Sass.png',
         ],
-        githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop',
-        siteUrl: 'https://commercejs-react-app.herokuapp.com',
+        githubUrl: 'https://github.com/Plvtinum-1/Yelp-Camp-v2',
+        siteUrl: 'https://yelp-camp-app-v2.herokuapp.com/',
     },
 ]
 
