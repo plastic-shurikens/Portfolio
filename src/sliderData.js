@@ -44,7 +44,7 @@ export const webApps = [
             'assets/Sass.png',
         ],
         githubUrl: 'https://github.com/Plvtinum-1/E_Commerce-Shop', 
-        siteUrl: 'https://commercejs-react-app.herokuapp.com/',
+        siteUrl: 'https://rcommercejs.netlify.app',
     },
 ]
 
